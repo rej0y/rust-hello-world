@@ -8,7 +8,7 @@
 
   outputs = { self, nixpkgs, fenix }:
     let
-      system = "x86_64-linux"; # or "aarch64-darwin", etc.
+      system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
       toolchain = fenix.packages.${system}.stable.toolchain;
     in {
